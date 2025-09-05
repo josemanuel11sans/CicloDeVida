@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentos</title>
+</head>
+<body>
+    <div>
+        <p>Area de un circulo</p>
+        <input type="number" name="" id="radio">
+        <button type="submit" id="areaCirculo">Obtener Area</button>
+        <!-- <input type="number" id="resultado"> -->
+        <h2 id="resultadoCirculo"></h2>
+    </div>
+
+    <div>
+        <p>Area de un triangulo</p>
+        <input type="number" name="" id="baseTriangulo">
+        <input type="number" name="" id="alturaTriangulo">
+        <button type="submit" id="areaTriangulo">Obtener Area</button>
+        <h2 id="resultadoTriangulo"></h2>
+    </div>
+
+    <div>
+        <p>Area de un rectangulo</p>
+        <input type="number" name="" id="baseRectangulo">
+        <input type="number" name="" id="alturaRectangulo">
+        <button type="submit" id="areaRectangulo">Obtener Area</button>
+        <h2 id="resultadoRectangulo"></h2>
+    </div>
+
+    <div>
+        <p>Area de un cuadrado</p>
+        <input type="number" name="" id="valorLado">
+        <button type="submit" id="areaCuadrado">Obtener Area</button>
+        <h2 id="resultadoCuadrado"></h2>
+    </div>
+
+    <div>
+        <p>Promedio de 5 cantidades</p>
+        <input type="number" name="" id="cantidad1">
+        <input type="number" name="" id="cantidad2">
+        <input type="number" name="" id="cantidad3">
+        <input type="number" name="" id="cantidad4">
+        <input type="number" name="" id="cantidad5">
+        <button type="submit" id="promedioCantidades">Obtener Promedio</button>
+        <h2 id="resultadoPromedio"></h2>
+    </div>
+
+    <div>
+        <p>Raiz Cuad</p>
+        <input type="number" name="" id="valorLado">
+        <button type="submit" id="areaCuadrado">Obtener Area</button>
+        <h2 id="resultadoCuadrado"></h2>
+    </div>
+
+    <script>
+        
+        //fucion para calcular el area de un circulo (PI*R)
+       document.getElementById("areaCirculo").addEventListener("click", function() {
+        console.log("ejecutado");
+            const radio = parseFloat(document.getElementById("radio").value);
+            if (isNaN(radio) || radio <= 0) {
+                alert("Por favor, ingrese un radio válido.");
+                console.log("radio invalido");
+                return;
+            }
+            const area = calcularAreaCirculo(radio);
+            console.log("Area circulo: " + area);
+            document.getElementById("resultadoCirculo").innerText = `El área del círculo es: ${area.toFixed(2)}`;
+        });
+        function calcularAreaCirculo(radio) {
+            return Math.PI * Math.pow(radio, 2);
+        }
+
+        //fucion para calcular el area de un triangulo (B*A/2)
+
+
+        //fucion para calcular el area de un rectangulo (B*A)
+
+        
+        //fucion para calcular el area de un rectangulo (L*L)
+
+
+    </script>
+
+
+<script>
+        document.getElementById("areaTriangulo").addEventListener("click", function() {
+            console.log("ejecutado");
+                const base = parseFloat(document.getElementById("baseTriangulo").value);
+                const altura = parseFloat(document.getElementById("alturaTriangulo").value);
+                if (isNaN(base) || base <= 0 || isNaN(altura) || altura <= 0) {
+                    alert("Por favor, ingrese valores válidos para la base y la altura.");
+                    console.log("base o altura invalido");
+                    return;
+                }
+                const area = calcularAreaTriangulo(base, altura);
+                console.log("Area triangulo: " + area);
+                alert(`El área del triángulo es: ${area.toFixed(2)}`);
+            });
+            function calcularAreaTriangulo(base, altura) {
+                return (base * altura) / 2;
+            }
+</script>
+    
+</body>
+</html>
